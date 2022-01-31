@@ -7,7 +7,7 @@ I developed Simple UI design of resume builder application with bootstrap 4,
 
 Upcoming Feautures:
 
-* Adding Redux form to maintain a All from states globally
+* Adding Redux form to maintain a All  states globally
 * Route Page
 
 ## Available Scripts
