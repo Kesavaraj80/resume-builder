@@ -1,5 +1,9 @@
 import React,{ useState} from "react";
 import { WithContext as ReactTags } from "react-tag-input";
+import { Form, Row, Col, Card } from "react-bootstrap";
+import './Skils.css'
+
+
 
 function Skils() {
  
@@ -9,7 +13,7 @@ function Skils() {
   };
 
   const delimiters = [KeyCodes.comma, KeyCodes.enter];
-  const [tags, setTags] = useState([{ "id": "1", text: "express" }]);
+  const [tags, setTags] = useState([]);
 
   const handleDelete = (i) => {
     setTags(tags.filter((tag, index) => index !== i));
@@ -34,33 +38,51 @@ function Skils() {
   };
 
   return (
-    <div className="Skils">
-      <div>
+    <Card className="Skils">
+      <div id="app">
+        <h4>Skills/Languages</h4>
         <ReactTags
           tags={tags}
           suggestions={[
-            { "id": "1", "text": "Javascript" },
-            { "id": "2", "text": "Python" },
-            { "id": "3", "text": "Java" },
-            { "id": "4", "text": "ReactJS" },
-            { "id": "5", "text": "NodeJS" },
-            { "id": "6", "text": "express" },
-            { "id": "7", "text": "Sql" },
-            { "id": "8", "text": "Mongodb" },
-            { "id": "9", "text": "Java" },
-            { "id": "10", "text": "C++" },
-            { "id": "11", "text": "C" },
+            { id: "1", text: "Javascript" },
+            { id: "2", text: "Python" },
+            { id: "3", text: "Java" },
+            { id: "4", text: "ReactJS" },
+            { id: "5", text: "NodeJS" },
+            { id: "6", text: "express" },
+            { id: "7", text: "Sql" },
+            { id: "8", text: "Mongodb" },
+            { id: "9", text: "Java" },
+            { id: "10", text: "C++" },
+            { id: "11", text: "C" },
           ]}
           delimiters={delimiters}
           handleDelete={handleDelete}
           handleAddition={handleAddition}
           handleDrag={handleDrag}
           handleTagClick={handleTagClick}
-          inputFieldPosition="bottom"
+          inputFieldPosition="inline"
           autocomplete
+          placeholder="Enter your skil"
         />
       </div>
-    </div>
+      <Form className="profile">
+        <h4>Interest</h4>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridFirstname">
+            <Form.Control type="text" placeholder="Interest 1" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridLastname">
+            <Form.Control type="text" placeholder="Interest 2" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridLastname">
+            <Form.Control type="text" placeholder="Interest 3" />
+          </Form.Group>
+        </Row>
+      </Form>
+    </Card>
   );
 }
 

@@ -6,6 +6,7 @@ import Profile from "./profile/Profile";
 import Education from "./education/Education";
 import Experience from "./experience/Experience";
 import Skils from "./skils/Skils";
+import Projects from "./projects/Projects";
 
 const educationComponent = [Education];
 const experienceComponent = [Experience];
@@ -93,7 +94,11 @@ function Resume() {
           </Button>
         </div>
       </Card.Body>
-      <Card.Header className="header">Skils Section</Card.Header>
+      <Card.Header className="header">Project Details</Card.Header>
+      <Card.Body>
+        <Projects />
+      </Card.Body>
+      <Card.Header className="header">Extra Details</Card.Header>
       <Card.Body>
         <Skils />
       </Card.Body>
