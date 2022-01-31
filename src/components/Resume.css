@@ -9,3 +9,11 @@
     width:100vw;
     text-align:center;
 }
+
+.education_item, .exp_item{
+    margin-bottom: 10px;
+}
+
+.rem_btn{
+    margin-left: 5px;
+}

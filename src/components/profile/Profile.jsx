@@ -7,26 +7,38 @@ function Profile() {
     <Card>
       <Form className="profile">
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Group as={Col} controlId="formGridFirstname">
             <Form.Label>First name</Form.Label>
             <Form.Control type="text" placeholder="First name" />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Group as={Col} controlId="formGridLastname">
             <Form.Label>Last name</Form.Label>
             <Form.Control type="text" placeholder="Last name" />
           </Form.Group>
         </Row>
 
         <Row>
-         <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="@email.com" />
+            <Form.Control type="email" placeholder="Email" />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Group as={Col} controlId="formGridPhone">
             <Form.Label>Phone Number</Form.Label>
-            <Form.Control type="text" placeholder="Enter Your Phone Number" />
+            <Form.Control type="text" placeholder="Phone Number" />
+          </Form.Group>
+        </Row>
+
+        <Row>
+          <Form.Group as={Col} controlId="formGridPortfolio">
+            <Form.Label>Portfolio</Form.Label>
+            <Form.Control type="text" placeholder="Portfolio" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridGithub">
+            <Form.Label>GitHub</Form.Label>
+            <Form.Control type="text" placeholder="GitHub" />
           </Form.Group>
         </Row>
 
