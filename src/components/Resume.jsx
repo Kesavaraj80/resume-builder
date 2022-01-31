@@ -57,14 +57,27 @@ function Resume() {
           >
             Add Field
           </Button>
-          <Button
-            variant="outline-danger"
-            size="md"
-            onClick={removeEducationField}
-            className="rem_btn"
-          >
-            Remove Field
-          </Button>
+
+          {educomponenet.length === 1 ? (
+            <Button
+              variant="outline-danger"
+              size="md"
+              onClick={removeEducationField}
+              className="rem_btn"
+              disabled
+            >
+              Remove Field
+            </Button>
+          ) : (
+            <Button
+              variant="outline-danger"
+              size="md"
+              onClick={removeEducationField}
+              className="rem_btn"
+            >
+              Remove Field
+            </Button>
+          )}
         </div>
       </Card.Body>
       <Card.Header className="header">Experience Details</Card.Header>
@@ -84,14 +97,28 @@ function Resume() {
           >
             Add Field
           </Button>
-          <Button
-            variant="outline-danger"
-            size="md"
-            onClick={removeExperienceField}
-            className="rem_btn"
-          >
-            Remove Field
-          </Button>
+
+          {expcomponenet.length === 1 ? (
+            <Button
+              variant="outline-danger"
+              size="md"
+              onClick={removeExperienceField}
+              className="rem_btn"
+              disabled
+            >
+              Remove Field
+            </Button>
+          ) : (
+            <Button
+              variant="outline-danger"
+              size="md"
+              onClick={removeExperienceField}
+              className="rem_btn"
+            >
+              Remove Field
+            </Button>
+          )}
+
         </div>
       </Card.Body>
       <Card.Header className="header">Project Details</Card.Header>
